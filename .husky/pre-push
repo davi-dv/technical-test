@@ -1,1 +1,1 @@
-npx --no-install --commitlint 
+npm --no-install run  commit 

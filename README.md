@@ -11,10 +11,16 @@ This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScri
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-jest&project-name=with-jest&repository-name=with-jest)
 
 ## Node version
+
 ```bash
 v21.7.1
 ```
+## Steps to use commitizen(semantical-commits)
 
+```bash
+git add .
+npm run commit
+```
 ## How to Use
 
 Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!

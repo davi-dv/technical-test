@@ -22,6 +22,11 @@
       "jest --findRelatedTests --passWithNoTests --bail"
     ]
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint"
+    }
+  },
   "dependencies": {
     "next": "14.2.5",
     "postcss": "^8.4.41",

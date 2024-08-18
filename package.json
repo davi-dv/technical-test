@@ -24,8 +24,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint staged",
-      "commit-msg": "commitlint"
+      "pre-commit": "npx --no-install lint-staged"
     }
   },
   "dependencies": {

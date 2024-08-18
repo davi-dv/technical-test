@@ -9,5 +9,6 @@ type Params = {
 export default function Page({ params }: Params) {
   console.log('teste')
   console.log('teste')
+  console.log('dd')
   return <h1 className="text-3xl font-bold underline">Slug: {params.slug}</h1>
 }

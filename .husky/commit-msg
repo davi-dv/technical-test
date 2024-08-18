@@ -1,3 +1,3 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-npm run commit --edit "$1"
+npx  commitlint --edit "$1"

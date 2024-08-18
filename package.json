@@ -16,8 +16,8 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "npm lint eslint:format",
-      "npm prettier:format",
+      "npm run eslint:format",
+      "npm run prettier:format",
       "npx typecheck",
       "npx test --findRelatedTests --passWithNoTests --bail"
     ]
@@ -31,6 +31,9 @@
     "tailwindcss": "^3.4.10"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.0.3",
     "@eslint/js": "^9.9.0",
     "@testing-library/jest-dom": "6.1.5",
     "@testing-library/react": "14.1.2",
@@ -39,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
     "autoprefixer": "^10.4.20",
+    "conventional-changelog-atom": "^5.0.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.5",
     "eslint-config-prettier": "^9.1.0",

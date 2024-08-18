@@ -33,7 +33,8 @@
     "**/*.tsx",
     "types.d.ts",
     ".next/types/**/*.ts",
-    "tailwind.config.ts"
+    "tailwind.config.ts",
+    "commitlint.config.ts"
   ],
   "exclude": ["node_modules"]
 }

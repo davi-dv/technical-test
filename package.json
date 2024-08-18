@@ -4,20 +4,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watchAll",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
     "test:ci": "jest --ci",
     "eslint:format": "eslint --fix .",
     "prettier:format": "prettier --write .",
     "commit": "git-cz",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "typecheck": "bash -c tsc --project tsconfig.json --noEmit"
   },
   "lint-staged": {
     "src/**/*": [
       "npm run eslint:format",
       "npm run prettier:format",
-      "npx typecheck",
-      "npx test --findRelatedTests --passWithNoTests --bail"
+      "npm run typecheck",
+      "jest --findRelatedTests --passWithNoTests --bail"
     ]
   },
   "dependencies": {

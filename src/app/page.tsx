@@ -1,12 +1,8 @@
-export const metadata = {
-  title: 'App Router'
-}
-
 export default function Page() {
   return (
     <div>
-      App Router
-      <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+      <h1>App Router</h1>
+      <h2 className="text-3xl font-bold underline">Hello, Next.js!</h2>
     </div>
   )
 }

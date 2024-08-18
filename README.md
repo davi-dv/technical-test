@@ -15,12 +15,14 @@ This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScri
 ```bash
 v21.7.1
 ```
+
 ## Steps to use commitizen(semantical-commits)
 
 ```bash
 git add .
 npm run commit
 ```
+
 ## How to Use
 
 Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!

@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "nome": "Tênis Casual Branco",
+      "descrição": "Tênis Casual Branco para Dia a Dia - Camursa",
+      "preço": 2999.99,
+      "imagem": "/imgs/tenis.jpg",
+      "id": 1,
+      "categoria": "tenis"
+    },
+    {
+      "nome": "Botas Impermeáveis",
+      "descrição": "Botas impermeáveis para clima frio e condições adversas.",
+      "preço": 399.99,
+      "id": 2,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "botas"
+    },
+    {
+      "nome": "Chuteira Futebol Campo",
+      "descrição": "Chuteira para futebol em campo, com solado aderente e conforto.",
+      "preço": 89.99,
+      "id": 3,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "chuteiras"
+    },
+    {
+      "nome": "Chinelo Havainas",
+      "descrição": "Chinelo confortável e durável, ideal para o uso diário.",
+      "preço": 599.99,
+      "id": 4,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "chinelos"
+    },
+    {
+      "nome": "Tênis Running Light",
+      "descrição": "Tênis para corrida com amortecimento avançado e design leve e respirável.",
+      "preço": 249.99,
+      "id": 5,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "tenis"
+    },
+    {
+      "nome": "Sapatenis Masculino Branco Tênis Casual FLOW",
+      "descrição": "Tênis para corrida com amortecimento avançado e design leve e respirável.",
+      "preço": 249.99,
+      "id": 6,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "sapatenis"
+    }
+  ]
+}

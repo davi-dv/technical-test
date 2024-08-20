@@ -1,8 +1,11 @@
-export default function Page() {
+import Image from 'next/image'
+import Catalog from './catalog/page'
+import { AppContext } from '@/context/index'
+
+export default function HomePage() {
   return (
-    <div>
-      <h1>App Router</h1>
-      <h2 className="text-3xl font-bold underline">Hello, Next.js!</h2>
-    </div>
+      <section className="p-12">
+        <Catalog />
+      </section>
   )
 }

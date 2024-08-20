@@ -19,7 +19,9 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/app/*": ["src/app/*"],
-      "@/styles/*": ["src/styles/*"]
+      "@/styles/*": ["src/styles/*"],
+      "@/context/*": ["src/context/*"],
+      "@/hooks/*": ["src/hooks/*"]
     },
     "plugins": [
       {

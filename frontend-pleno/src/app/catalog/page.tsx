@@ -13,7 +13,7 @@ export default function Catalog() {
   const { setProducts, products } = useProducts()
   const [selectedOptions, setSelectedOptions] = useState<number[]>([])
   const [options, setOptions] = useState<{ id: number; label: string }[]>([])
-  const { setCartItems } = useCartItems()
+  const { handleSetCartItems } = useCartItems()
   let t = {
     d: ''
   };
@@ -38,27 +38,7 @@ export default function Catalog() {
       setProducts(data)
     }
   }, [setProducts])
-  const addToCart = (item: IProduct) => {
-    setCartItems((prevItems) => {
-      // Verifica se o item já está no carrinho
-      const itemIndex = prevItems.findIndex(
-        (cartItem) => cartItem.id === item.id
-      )
 
-      if (itemIndex !== -1) {
-        // Item já existe no carrinho, atualize a quantidade
-        const updatedItems = [...prevItems]
-        updatedItems[itemIndex] = {
-          ...updatedItems[itemIndex],
-          quantity: updatedItems[itemIndex].quantity + 1 // Incrementa a quantidade
-        }
-        return updatedItems
-      } else {
-        // Item não existe no carrinho, adicione-o com quantidade inicial 1
-        return [...prevItems, { ...item, quantity: 1 }]
-      }
-    })
-  }
   const goToProductDetails = (id:string) => {
     router.push(`/productDetails/${id}`)
   }
@@ -117,7 +97,7 @@ export default function Catalog() {
                     R$ {product.preço.toFixed(2)}
                   </p>
                 </div>
-                <div className="content-end" onClick={() => addToCart(product)}>
+                <div className="content-end" onClick={() => handleSetCartItems(product)}>
                   <button className="mt-4 w-full rounded border-2 border-primary bg-white px-4 py-2 text-primary">
                     Adicionar ao carrinho
                   </button>

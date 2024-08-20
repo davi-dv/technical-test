@@ -1,5 +1,4 @@
 import Catalog from './catalog/page'
-import Banner from '@/components/Banner'
 
 export default function HomePage() {
   return (

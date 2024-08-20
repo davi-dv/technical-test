@@ -5,7 +5,7 @@ export interface IProduct {
   imagem: string
   id: number
   categoria: string
-  quantity?: number | ""
+  quantity?: number 
 }
 export interface IAppContextType {
   products: IProduct[]

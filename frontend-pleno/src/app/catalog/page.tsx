@@ -7,14 +7,18 @@ import { IProduct } from 'src/types'
 
 import InputWithIcon from '@/components/Input'
 import RangeSlider from '@/components/RangeSlider/RangeSlider'
+import { useRouter } from 'next/navigation'
 
 export default function Catalog() {
   const { setProducts, products } = useProducts()
   const [selectedOptions, setSelectedOptions] = useState<number[]>([])
   const [options, setOptions] = useState<{ id: number; label: string }[]>([])
   const { setCartItems } = useCartItems()
-
-  const handleChange = (id: number) => {
+  let t = {
+    d: ''
+  };
+  const router = useRouter()
+  const handleChange =  (id: number) => {
     setSelectedOptions((prevState) =>
       prevState.includes(id)
         ? prevState.filter((optionId) => optionId !== id)
@@ -55,11 +59,14 @@ export default function Catalog() {
       }
     })
   }
+  const goToProductDetails = (id:string) => {
+    router.push(`/productDetails/${id}`)
+  }
   useEffect(() => {
     getProducts()
   }, [getProducts])
-  return (
-    <div>
+  return  (
+    <div >
       <div className="flex items-center justify-between p-8">
         {<p> {products.length} produtos encontrados</p>}
         <InputWithIcon />
@@ -93,9 +100,9 @@ export default function Catalog() {
           </div>
         </div>
         <div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" >
             {products.map((product) => (
-              <div key={product.id} className="grid">
+              <div key={product.id} className="grid" onClick={() => goToProductDetails(product.id)}>
                 <div className="content-start">
                   <img
                     src={product.imagem}

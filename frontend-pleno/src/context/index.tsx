@@ -1,12 +1,13 @@
 'use client'
 
 import { createContext, useState, ReactNode } from 'react'
-import { IProduct } from 'src/types'
 
-export const appContext = createContext<any>(null)
+import { IAppContextType, IProduct } from 'src/types'
 
-export function AppContext ({ children }: { children: ReactNode })  {
-  const [products, setProducts] = useState<any[]>([])
+export const appContext = createContext<IAppContextType | null>(null)
+
+export function AppContext({ children }: { children: ReactNode }) {
+  const [products, setProducts] = useState<IProduct[]>([])
   const [cartItems, setCartItems] = useState<IProduct[]>([])
 
   const contextValue = {

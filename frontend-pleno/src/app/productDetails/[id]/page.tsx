@@ -1,5 +1,4 @@
-"use client"
-import Image from 'next/image'
+'use client'
 
 export default function productDetails({ params }: { params: { id: string } }) {
   return (

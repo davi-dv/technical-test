@@ -1,5 +1,6 @@
 'use client'
 import { useContext } from 'react'
+
 import { appContext } from '@/context/index'
 
 export default function useProducts() {

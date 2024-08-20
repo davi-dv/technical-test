@@ -1,7 +1,8 @@
 import '../styles/globals.css'
-import Navbar from '@/components/Navbar'
-import Banner from '@/components/Banner'
 import { AppContext } from '@/context/index'
+
+import Banner from '@/components/Banner'
+import Navbar from '@/components/Navbar'
 
 export default function RootLayout({
   children
@@ -10,13 +11,13 @@ export default function RootLayout({
 }>) {
   return (
     <AppContext>
-    <html lang="en">
-      <body>
-        <Navbar />
-        <Banner />
-        {children}
-      </body>
-    </html>
+      <html >
+        <body>
+          <Navbar />
+          <Banner />
+          {children}
+        </body>
+      </html>
     </AppContext>
   )
 }

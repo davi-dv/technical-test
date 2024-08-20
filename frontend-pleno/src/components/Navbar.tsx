@@ -1,15 +1,9 @@
 'use client'
 import { useState } from 'react'
-import useCartItems from '@/hooks/useCartItems';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const {cartItems} = useCartItems()
-  const t = {
-    teste: '',
-    dd: ''
-  };
-  console.log(cartItems,  'cart items')
+
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
@@ -21,7 +15,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden space-x-4 md:flex">
-          <a href="#" className="flex items-center">
+            <a href="#" className="flex items-center">
               <img
                 src="/icons/shop.svg"
                 alt="User"
@@ -67,7 +61,7 @@ export default function Navbar() {
 
         <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-white`}>
           <div className="flex flex-col items-start space-y-4 p-4">
-          <a href="#" className="flex items-center">
+            <a href="#" className="flex items-center">
               <img
                 src="/icons/shop.svg"
                 alt="User"
@@ -75,7 +69,7 @@ export default function Navbar() {
                 height={16}
                 className="mr-2"
               />
-           <p>Carrinho</p>
+              <p>Carrinho</p>
             </a>
 
             <a href="#" className="flex items-center">
@@ -90,7 +84,6 @@ export default function Navbar() {
             </a>
           </div>
         </div>
-        
       </div>
     </nav>
   )

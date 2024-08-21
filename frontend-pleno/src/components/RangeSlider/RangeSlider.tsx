@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import './rangeSlider.css'
+import React, { useState } from 'react';
+import './rangeSlider.css';
+import { RangeSliderProps } from 'src/types';
 
-export default function RangeSlider() {
-  const [value, setValue] = useState(0)
-
-  const handleChange = (event) => {
-    setValue(event.target.value)
-  }
+export default function RangeSlider({ min, max, value, onChange }: RangeSliderProps) {
+  // Atualiza o estado local com o valor do slider
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(parseFloat(event.target.value)); // Converte o valor para número
+  };
 
   return (
     <div className="flex flex-col items-center p-1">
@@ -18,22 +18,19 @@ export default function RangeSlider() {
         <input
           id="range-slider"
           type="range"
-          min="0"
-          max="100"
+          min={min}
+          max={max}
           step="1"
           value={value}
           onChange={handleChange}
           className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200"
-          style={{
-            background: `linear-gradient(to right, #FF7600 ${value}%, #F3F4F6 ${value}%)`
-          }}
         />
       </div>
       <div className="mt-2 flex w-full justify-between text-sm text-gray-600">
-        <span>0</span>
+        <span>{min}</span>
         <span>{value}</span>
-        <span>100</span>
+        <span>{max}</span>
       </div>
     </div>
-  )
+  );
 }

@@ -41,10 +41,34 @@
       "categoria": "tenis"
     },
     {
-      "nome": "Sapatenis Masculino Branco Tênis Casual FLOW",
+      "nome": "Tênis Running Light",
       "descrição": "Tênis para corrida com amortecimento avançado e design leve e respirável.",
       "preço": 249.99,
       "id": 6,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "sapatenis"
+    },
+    {
+      "nome": "Sapatenis Masculino Branco Tênis Casual FLOW",
+      "descrição": "Tênis para corrida com amortecimento avançado e design leve e respirável.",
+      "preço": 2429.99,
+      "id": 7,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "sapatenis"
+    },
+    {
+      "nome": "Sapatenis Masculino Branco Tênis Casual FLOW",
+      "descrição": "Tênis para corrida com amortecimento avançado e design leve e respirável.",
+      "preço": 300,
+      "id": 8,
+      "imagem": "/imgs/tenis.jpg",
+      "categoria": "sapatenis"
+    },
+    {
+      "nome": "Chuteira Futebol Campo",
+      "descrição": "Chuteira para futebol em campo, com solado aderente e conforto.",
+      "preço": 234,
+      "id": 9,
       "imagem": "/imgs/tenis.jpg",
       "categoria": "sapatenis"
     }

@@ -33,3 +33,14 @@ export interface QuantitySelectorProps {
 export interface CartItemProps {
   product: IProduct
 }
+
+export interface IInput {
+  searchTerm: string;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+export interface RangeSliderProps {
+  min: number;
+  max: number;
+  value: number;
+  onChange: (value:number) => void;
+}

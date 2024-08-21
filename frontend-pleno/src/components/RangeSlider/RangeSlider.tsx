@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import './rangeSlider.css';
-import { RangeSliderProps } from 'src/types';
+import React from 'react'
 
-export default function RangeSlider({ min, max, value, onChange }: RangeSliderProps) {
-  // Atualiza o estado local com o valor do slider
+import './rangeSlider.css'
+import { RangeSliderProps } from 'src/types'
+
+export default function RangeSlider({
+  min,
+  max,
+  value,
+  onChange
+}: RangeSliderProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(parseFloat(event.target.value)); // Converte o valor para número
-  };
+    onChange(parseFloat(event.target.value))
+  }
 
   return (
     <div className="flex flex-col items-center p-1">
@@ -14,7 +19,6 @@ export default function RangeSlider({ min, max, value, onChange }: RangeSliderPr
         Preço
       </label>
       <div className="relative w-full">
-        {/* Slider */}
         <input
           id="range-slider"
           type="range"
@@ -32,5 +36,5 @@ export default function RangeSlider({ min, max, value, onChange }: RangeSliderPr
         <span>{max}</span>
       </div>
     </div>
-  );
+  )
 }

@@ -35,12 +35,12 @@ export interface CartItemProps {
 }
 
 export interface IInput {
-  searchTerm: string;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  searchTerm: string
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 export interface RangeSliderProps {
-  min: number;
-  max: number;
-  value: number;
-  onChange: (value:number) => void;
+  min: number
+  max: number
+  value: number
+  onChange: (value: number) => void
 }

@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="bg-white">
+      <div className="mx-auto flex max-w-[1280px] flex-col bg-white py-4 md:flex-row">
         <div className="md:pt-custom-top md:pr-custom-right md:pb-custom-bottom md:pl-custom-left flex w-full items-center justify-between p-4">
           <div className="flex items-center">
             <img src="/icons/logo.svg" alt="Logo" />

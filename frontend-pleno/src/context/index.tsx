@@ -6,11 +6,11 @@ import { IAppContextType, IProduct } from 'src/types'
 
 const defaultContextValue: IAppContextType = {
   products: [],
-  setProducts: () => {}, 
+  setProducts: () => {},
   cartItems: [],
-  setCartItems: () => {}, 
+  setCartItems: () => {},
   handleSetCartItems: () => {}
-};
+}
 
 export const appContext = createContext<IAppContextType>(defaultContextValue)
 
@@ -22,19 +22,19 @@ export function AppContext({ children }: { children: ReactNode }) {
     setCartItems((prevItems: IProduct[]) => {
       const itemIndex = prevItems.findIndex(
         (cartItem) => cartItem.id === product.id
-      );
+      )
       if (itemIndex !== -1) {
-        const updatedItems = [...prevItems];
+        const updatedItems = [...prevItems]
         updatedItems[itemIndex] = {
           ...updatedItems[itemIndex],
-          quantity: (updatedItems[itemIndex].quantity || 0) + 1 
-        };
-        return updatedItems;
+          quantity: (updatedItems[itemIndex].quantity || 0) + 1
+        }
+        return updatedItems
       } else {
-        return [...prevItems, { ...product, quantity: 1 }];
+        return [...prevItems, { ...product, quantity: 1 }]
       }
-    });
-  };
+    })
+  }
   const contextValue = {
     products,
     setProducts,

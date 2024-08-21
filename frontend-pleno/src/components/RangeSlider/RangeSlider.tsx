@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './rangeSlider.css' 
+import './rangeSlider.css'
 
 export default function RangeSlider() {
-  const [value, setValue] = useState(0) 
+  const [value, setValue] = useState(0)
 
   const handleChange = (event) => {
     setValue(event.target.value)

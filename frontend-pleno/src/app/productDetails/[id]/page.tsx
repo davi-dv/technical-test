@@ -67,12 +67,12 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between">
-          <div className="text-initial">
-            <p className="text-sm text-gray-600">{product.categoria}</p>
-            <h1 className="mt-2 text-2xl font-semibold">{product.nome}</h1>
+        <div className="flex flex-col justify-between ">
+          <div className="text-initial ">
+            <p className="text-sm text-gray-600 mb-4">{product.categoria}</p>
+            <h1 className="mt-2 text-2xl font-semibold mb-4">{product.nome}</h1>
           </div>
-          <div className="text-center">
+          <div className="flex flex-col text-center bg-gray-50 h-full justify-center m-2">
             <div className="flex justify-center">
               <img src="/icons/pix.svg" alt="" className="h-auto w-auto" />
             </div>

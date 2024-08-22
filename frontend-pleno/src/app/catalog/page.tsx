@@ -106,11 +106,11 @@ export default function Catalog() {
                   id={`checkbox-${option.id}`}
                   checked={selectedOptions.includes(option.id)}
                   onChange={() => handleChange(option.id)}
-                  className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-blue-500"
+                  className="h-4 w-4 rounded"
                 />
                 <label
                   htmlFor={`checkbox-${option.id}`}
-                  className="ml-2 text-sm font-medium text-gray-900"
+                  className="ml-2 text-sm font-medium text-gray-400"
                 >
                   {option.label}
                 </label>

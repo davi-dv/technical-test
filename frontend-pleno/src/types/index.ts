@@ -44,3 +44,18 @@ export interface RangeSliderProps {
   value: number
   onChange: (value: number) => void
 }
+
+export interface IModalContextType {
+  openModal: (name: string) => void
+  onClose: () => void
+  modalName: string
+  isOpen: boolean
+  onSuccess: () => void
+  handleCreateAccountSuccess: () => void
+}
+export interface IFormInputs {
+  nome: string
+  email: string
+  telefone: string
+  senha: string
+}

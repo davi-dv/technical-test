@@ -1,11 +1,14 @@
-'use client'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
 
   const toggleMenu = () => setIsOpen(!isOpen)
-
+  const goToCart = () => {
+    router.push(`/cart`)
+  }
   return (
     <nav>
       <div className="mx-auto flex max-w-[1280px] flex-col bg-white py-4 md:flex-row">
@@ -23,7 +26,7 @@ export default function Navbar() {
                 height={16}
                 className="mr-2"
               />
-              <p>carrinho</p>
+              <p onClick={goToCart}>carrinho</p>
             </a>
 
             <span className="flex items-center">
@@ -69,7 +72,7 @@ export default function Navbar() {
                 height={16}
                 className="mr-2"
               />
-              <p>Carrinho</p>
+              <p onClick={goToCart}>Carrinho</p>
             </a>
 
             <a href="#" className="flex items-center">

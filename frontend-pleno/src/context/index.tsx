@@ -1,5 +1,3 @@
-'use client'
-
 import { createContext, useState, ReactNode } from 'react'
 
 import { IAppContextType, IProduct } from 'src/types'

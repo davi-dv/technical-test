@@ -1,3 +1,4 @@
+import useModal from '@/hooks/useModal'
 import { SummaryProps } from 'src/types'
 
 export default function SummaryOrder({
@@ -5,6 +6,12 @@ export default function SummaryOrder({
   shipping,
   total
 }: SummaryProps) {
+  const { openModal } = useModal()
+
+  const handleSetModalVisible = () => {
+    openModal('create-account')
+  }
+
   return (
     <>
       <div className="mt-4 flex flex-col pt-4">
@@ -20,7 +27,10 @@ export default function SummaryOrder({
           <span className="font-semibold">Total:</span>
           <span className="font-semibold">R$ {total.toFixed(2)}</span>
         </div>
-        <button className="w-full rounded-lg bg-primary px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button
+          className="w-full rounded-lg bg-primary px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          onClick={() => handleSetModalVisible()}
+        >
           Finalizar Pedido
         </button>
       </div>

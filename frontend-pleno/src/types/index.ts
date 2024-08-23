@@ -35,6 +35,7 @@ export interface CartItemProps {
 }
 
 export interface IInput {
+  searchTerm: string
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 export interface RangeSliderProps {

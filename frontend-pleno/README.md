@@ -1,16 +1,4 @@
-# Next.js + Jest
-
-This example shows how to configure Jest to work with Next.js.
-
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript. This example also shows how to use Jest with the App Router and React Server Components.
-
-> **Note:** Since tests can be co-located alongside other files inside the App Router, we have placed those tests in `app/` to demonstrate this behavior (which is different than `pages/`). You can still place all tests in `__tests__` if you prefer.
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-jest&project-name=with-jest&repository-name=with-jest)
-
-## Node version
+## use the Node version bellow
 
 ```bash
 v21.7.1
@@ -23,26 +11,29 @@ git add .
 npm run commit
 ```
 
-## How to Use
-
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
+## Steps to run tests
 ```bash
-npx create-next-app --example with-jest with-jest-app
+npm run test
 ```
 
+## How to run the project in the terminal
 ```bash
-yarn create next-app --example with-jest with-jest-app
+ open one terminal and run this command: npm i 
+ open one terminal and run this command: npm run server
+ open  other terminal and run this command also: npm run dev
 ```
 
+## Project Details main libs useds
 ```bash
-pnpm create next-app --example with-jest with-jest-app
+  used jest to make unit tests
+  used react-hook form to work with input validations
+  used context-api to share data with all the components
+  used hooks to make easier work with the data from the context
+  used typescript to specify the types of data of the application
+  used tailwind-css to stylize all the components in this project
+  used eslint and prettier to format all the components
+  used lint-staged to run the hook when do some commit in the project
+  used commitizen to follow one patern of commit
+  used json-server to simulate the backend api to get the products
 ```
 
-## Running Tests
-
-```bash
-npm test
-```

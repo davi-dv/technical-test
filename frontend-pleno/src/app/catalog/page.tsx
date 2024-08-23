@@ -72,7 +72,7 @@ export default function Catalog() {
     setFilteredProducts(filtered)
   }, [searchTerm, selectedOptions, allProducts, priceValue])
 
-  const goToProductDetails = (id: string) => {
+  const goToProductDetails = (id: number) => {
     router.push(`/productDetails/${id}`)
   }
 

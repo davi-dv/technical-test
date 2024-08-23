@@ -44,6 +44,7 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
+    "react/display-name": "off",
 
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/restrict-template-expressions": "off",

@@ -19,6 +19,7 @@ export default function QuantitySelector({
           onClick={() => handleQuantityChange(product.id, quantity - 1)}
           disabled={quantity <= 1}
           className="h-full w-12 rounded bg-gray-100 px-2 py-1"
+          data-testid="decrement-button"
         >
           -
         </button>
@@ -28,6 +29,7 @@ export default function QuantitySelector({
         <button
           onClick={() => handleQuantityChange(product.id, quantity + 1)}
           className="h-full w-12 rounded border-none bg-gray-100 px-2 py-1"
+          data-testid="increment-button"
         >
           +
         </button>
